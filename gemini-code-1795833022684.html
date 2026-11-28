@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlashDigitals — Produtora Audiovisual B2B</title>
+  <meta name="description" content="Produtora audiovisual B2B. Transformamos 1 dia de captação em 12 a 24 vídeos mensais para empresas pequenas, médias e grandes." />
+
+  <!-- Tipografia Editorial (Plus Jakarta Sans + Space Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f7f7f5;
+      --bg-dark: #111111;
+      --text: #111111;
+      --text-muted: #5c5c58;
+      --border: #e5e5e0;
+      --yellow: #eabc12;
+      --yellow-hover: #d9ad0e;
+      --radius: 10px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Etiquetas Técnicas */
+    .mono-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .badge-yellow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--yellow);
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    /* Botões */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--yellow);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 22px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--yellow-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+      background-color: var(--bg-soft);
+    }
+
+    /* Cabeçalho */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--yellow);
+      display: inline-block;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav.desktop-nav a,
+    nav.desktop-nav button.nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    nav.desktop-nav a:hover,
+    nav.desktop-nav button.nav-link:hover,
+    nav.desktop-nav button.nav-link.active {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-icon-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .social-icon-link:hover {
+      border-color: var(--text);
+      background-color: var(--bg-soft);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      padding: 20px 24px 28px;
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-drawer-links a,
+    .mobile-drawer-links button {
+      text-align: left;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Seções Gerais */
+    section {
+      padding: 88px 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 76px 0 64px;
+    }
+
+    .hero-top {
+      max-width: 860px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 18px 0 22px;
+    }
+
+    .hero p.lead {
+      font-size: clamp(17px, 2vw, 20px);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 32px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 52px;
+    }
+
+    /* Vitrine Vídeo de Apresentação (Hero) */
+    .hero-reel-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 21 / 9;
+      min-height: 300px;
+      background-color: var(--bg-dark);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 28px;
+      color: #ffffff;
+    }
+
+    .hero-reel-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .hero-reel-top,
+    .hero-reel-bottom {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .hero-reel-center {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .hero-reel-center p {
+      font-size: 14px;
+      color: #b8b8b2;
+      margin-top: 8px;
+    }
+
+    /* Faixa de Clientes */
+    .clients-section {
+      padding: 48px 0 72px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background-color: var(--bg-soft);
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .client-card {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      height: 88px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      transition: border-color 0.2s ease;
+    }
+
+    .client-card:hover {
+      border-color: #bcbcb6;
+    }
+
+    .client-card.active-client {
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .client-card.placeholder-client span.title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .client-card.placeholder-client span.sub {
+      font-size: 11px;
+      color: #9a9a94;
+      margin-top: 3px;
+    }
+
+    /* Vitrine de Produtos */
+    .products-list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    .product-row {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .product-media {
+      position: relative;
+      background-color: var(--bg-dark);
+      border-radius: var(--radius);
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid #222222;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product-media:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+    }
+
+    .product-media video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-media-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(17,17,17,0.55) 0%, rgba(17,17,17,0.12) 45%, rgba(17,17,17,0.68) 100%);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .product-media-top,
+    .product-media-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .product-media-bottom .mono-tag {
+      color: #e5e5e0;
+    }
+
+    .product-media-bottom .open-hint {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--yellow);
+      letter-spacing: 0.06em;
+    }
+
+    /* Visual Simulado para os Produtos 02, 03 e 04 enquanto não têm vídeo próprio */
+    .product-mock-canvas {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    .product-mock-box {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      padding: 22px 28px;
+      max-width: 360px;
+    }
+
+    .product-mock-box p {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    .product-mock-box span {
+      display: block;
+      color: #9e9e98;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .product-info h3 {
+      font-size: clamp(26px, 3vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin: 14px 0 12px;
+      line-height: 1.15;
+    }
+
+    .product-info p.desc {
+      color: var(--text-muted);
+      font-size: 15.5px;
+      margin-bottom: 16px;
+    }
+
+    .product-highlights {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 14px 16px;
+      background-color: var(--bg-soft);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 13.5px;
+    }
+
+    .product-highlights li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .product-highlights li::before {
+      content: '•';
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Quem Somos Nós */
+    .about-section {
+      background-color: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-left h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin: 14px 0 20px;
+    }
+
+    .about-left p {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .pillars-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pillar-card {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 24px;
+    }
+
+    .pillar-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 8px 0 6px;
+    }
+
+    .pillar-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Banner de Transição Galeria */
+    .gallery-teaser {
+      background-color: var(--bg-dark);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 44px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .gallery-teaser h3 {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 10px 0 8px;
+    }
+
+    .gallery-teaser p {
+      color: #b8b8b2;
+      max-width: 560px;
+      font-size: 15px;
+    }
+
+    /* Subpágina Galeria Criativa */
+    #view-gallery {
+      display: none;
+      padding: 56px 0 96px;
+    }
+
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 9px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background-color: var(--bg);
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--text);
+      color: #ffffff;
+      border-color: var(--text);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .gallery-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-color: var(--bg);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .gallery-thumb {
+      aspect-ratio: 4 / 3;
+      background-color: #181818;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      position: relative;
+    }
+
+    .gallery-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item-body {
+      padding: 16px 18px;
+    }
+
+    .gallery-item-body h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .gallery-item-body p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Rodapé */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+      background-color: var(--bg);
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-top h2 {
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      max-width: 580px;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    /* Modais (Produto, Resumo do Projeto e Lightbox) */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background-color: rgba(17, 17, 17, 0.72);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-window {
+      background-color: var(--bg);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 920px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 28px 32px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .modal-close {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--text-muted);
+    }
+
+    .modal-close:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .modal-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .modal-info-card {
+      background-color: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .modal-info-card h5 {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .modal-info-card p {
+      font-size: 13.5px;
+      color: var(--text);
+    }
+
+    /* Simulador Multi-Formato com os 3 Vídeos Reais */
+    .simulator-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      background-color: var(--bg);
+    }
+
+    .simulator-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .format-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .format-tab {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background-color: var(--bg);
+      color: var(--text-muted);
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .format-tab.active {
+      background-color: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--text);
+    }
+
+    .simulator-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .video-frame-wrapper {
+      background-color: var(--bg-dark);
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 290px;
+    }
+
+    .video-aspect-box {
+      width: 100%;
+      background: #000000;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .video-aspect-box.ratio-16x9 {
+      aspect-ratio: 16 / 9;
+      max-width: 100%;
+    }
+
+    .video-aspect-box.ratio-4x5 {
+      aspect-ratio: 4 / 5;
+      max-width: 240px;
+    }
+
+    .video-aspect-box.ratio-9x16 {
+      aspect-ratio: 9 / 16;
+      max-width: 195px;
+    }
+
+    .video-aspect-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .simulator-details h4 {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 8px 0 10px;
+    }
+
+    .simulator-details p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .delivery-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background-color: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    .modal-footer-cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Formulário de Proposta */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--text);
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      nav.desktop-nav,
+      .header-actions .btn-primary {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .product-row,
+      .about-grid,
+      .simulator-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .modal-3col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .gallery-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-window {
+        padding: 20px;
+      }
+
+      .gallery-teaser {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" onclick="switchView('home')">
+        <span class="brand-dot"></span>
+        <span>FLASHDIGITALS</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <button class="nav-link active" id="nav-home" onclick="switchView('home')">Início</button>
+        <a href="#produtos" onclick="switchView('home')">Produtos</a>
+        <a href="#clientes" onclick="switchView('home')">Clientes</a>
+        <a href="#quem-somos" onclick="switchView('home')">Quem somos</a>
+        <button class="nav-link" id="nav-gallery" onclick="switchView('gallery')">Galeria Criativa</button>
+      </nav>
+
+      <div class="header-actions">
+        <!-- LinkedIn Oficial -->
+        <a href="https://www.linkedin.com/company/flashdigitals/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn FlashDigitals" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+        </a>
+
+        <!-- Instagram Oficial -->
+        <a href="https://www.instagram.com/flashdigitalsp/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram FlashDigitals" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2A5.8 5.8 0 0 1 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2M7.6 4A3.6 3.6 0 0 0 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4A3.6 3.6 0 0 0 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6M17.25 5.5A1.25 1.25 0 0 1 18.5 6.75A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75A1.25 1.25 0 0 1 17.25 5.5M12 7A5 5 0 0 1 17 12A5 5 0 0 1 12 17A5 5 0 0 1 7 12A5 5 0 0 1 12 7M12 9A3 3 0 0 0 9 12A3 3 0 0 0 12 15A3 3 0 0 0 15 12A3 3 0 0 0 12 9Z"/></svg>
+        </a>
+
+        <button class="btn-primary" onclick="openQuoteModal('Geral')">Solicitar proposta</button>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-drawer-links">
+        <button onclick="switchView('home'); toggleMobileMenu()">Início</button>
+        <a href="#produtos" onclick="switchView('home'); toggleMobileMenu()">Produtos</a>
+        <a href="#clientes" onclick="switchView('home'); toggleMobileMenu()">Clientes</a>
+        <a href="#quem-somos" onclick="switchView('home'); toggleMobileMenu()">Quem somos</a>
+        <button onclick="switchView('gallery'); toggleMobileMenu()">Galeria Criativa</button>
+      </div>
+      <button class="btn-primary" style="width: 100%;" onclick="openQuoteModal('Geral'); toggleMobileMenu()">Solicitar proposta</button>
+    </div>
+  </header>
+
+  <!-- ==================== VISÃO PRINCIPAL (INÍCIO) ==================== -->
+  <main id="view-home">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-top">
+          <span class="badge-yellow">PRODUTORA AUDIOVISUAL B2B</span>
+          <h1>Uma produtora audiovisual que constrói autoridade e constância para a sua marca.</h1>
+          <p class="lead">
+            Estruturamos produtos audiovisuais completos para empresas pequenas, médias e grandes — transformando um único dia de captação em semanas de vídeos prontos para LinkedIn, Instagram, YouTube e campanhas.
+          </p>
+          <div class="hero-cta-row">
+            <button class="btn-primary" onclick="openQuoteModal('Expert Talks')">Solicitar proposta →</button>
+            <a href="#produtos" class="btn-outline">Conhecer produtos</a>
+            <button class="btn-outline" onclick="switchView('gallery')">Galeria Criativa</button>
+          </div>
+        </div>
+
+        <!-- Vitrine do Vídeo de Apresentação -->
+        <div class="hero-reel-box">
+          <div class="hero-reel-top">
+            <span class="mono-tag" style="color: #eabc12;">● PORTFÓLIO EM VÍDEO</span>
+            <span class="mono-tag" style="color: #a8a8a2;">DIREÇÃO · CAPTAÇÃO · PÓS-PRODUÇÃO</span>
+          </div>
+
+          <div class="hero-reel-center">
+            <!-- EDITE AQUI: Quando tiver um vídeo curto de apresentação geral, substitua este bloco por <video autoplay muted loop playsinline src="seu-video-apresentacao.mp4"></video> -->
+            <span class="mono-tag" style="color: #ffffff;">VÍDEO DE APRESENTAÇÃO FLASHDIGITALS</span>
+            <p>Produção recorrente, cobertura de eventos e projetos sob medida para empresas em crescimento.</p>
+          </div>
+
+          <div class="hero-reel-bottom">
+            <span class="mono-tag" style="color: #a8a8a2;">16:9 · 4:5 · 9:16</span>
+            <a href="#produtos" class="mono-tag" style="color: #eabc12;">VER PRODUTOS ABAIXO ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPRESAS COM QUEM JÁ TRABALHAMOS -->
+    <section class="clients-section" id="clientes">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+          <span class="mono-tag">— EMPRESAS COM QUEM JÁ TRABALHAMOS</span>
+          <span class="mono-tag">PROJETOS RECORRENTES E SOB DEMANDA</span>
+        </div>
+
+        <div class="clients-grid">
+          <!-- EDITE AQUI: Para colocar o logo em imagem, substitua o texto por <img src="imagens/logo-plusoft.png" alt="Plusoft" style="max-height: 36px;"> -->
+          <div class="client-card active-client">Plusoft</div>
+
+          <!-- EDITE AQUI: Preencha os nomes ou logos dos próximos clientes -->
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 02</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 03</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 04</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 05</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 06</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 07</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+          <div class="client-card placeholder-client">
+            <span class="title">CLIENTE 08</span>
+            <span class="sub">Espaço para logo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VITRINE DE PRODUTOS -->
+    <section id="produtos">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="mono-tag">— PRODUTOS & FORMATOS</span>
+            <h2 style="font-size: clamp(28px, 3.5vw, 40px); letter-spacing: -0.025em; margin-top: 8px;">Soluções audiovisuais para cada momento da sua empresa</h2>
+          </div>
+          <span class="mono-tag">CLIQUE EM UM PRODUTO PARA VER FORMATOS E EXEMPLOS</span>
+        </div>
+
+        <div class="products-list">
+
+          <!-- PRODUTO 01: EXPERT TALKS (COM VÍDEO INTRO EM LOOP + MODAL COM OS 3 VÍDEOS REAIS) -->
+          <article class="product-row">
+            <div class="product-media" onclick="openProductModal('expert-talks')">
+              <!-- Vídeo Intro subido na raiz do repositório GitHub -->
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="Expert talks Intro .mp4" type="video/mp4" />
+              </video>
+
+              <div class="product-media-overlay">
+                <div class="product-media-top">
+                  <span class="badge-yellow">01 / PRODUTO DESTAQUE</span>
+                  <span class="mono-tag" style="color: #ffffff;">1 DIÁRIA · 12 A 24 VÍDEOS/MÊS</span>
+                </div>
+                <div class="product-media-bottom">
+                  <span class="mono-tag">PROJETO DEMONSTRAÇÃO: PLUSOFT</span>
+                  <span class="open-hint">VER FORMATOS (16:9 · 4:5 · 9:16) →</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="badge-yellow">PRODUTO RECORRENTE · 16:9 / 4:5 / 9:16</span>
+              <h3>Expert Talks</h3>
+              <p class="desc">
+                Modelo criado para <strong>empresas pequenas, médias e grandes</strong> que precisam manter frequência real nas redes sociais sem parar a rotina da equipe. Em <strong>1 único dia de captação, entregamos de 12 a 24 vídeos mensais com disparos toda semana</strong>.
+              </p>
+              <ul class="product-highlights">
+                <li><strong>1 dia de gravação = 12 a 24 vídeos/mês</strong> distribuídos semanalmente</li>
+                <li>Entregas nativas em <strong>16:9</strong> (YouTube/LinkedIn), <strong>4:5</strong> (Instagram) e <strong>9:16</strong> (Reels e Anúncios)</li>
+                <li><strong>Caso de referência:</strong> projeto dirigido para a <strong>Plusoft</strong></li>
+              </ul>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="openProductModal('expert-talks')">> Ver produto e formatos</button>
+                <button class="btn-outline" onclick="openQuoteModal('Expert Talks')">Solicitar proposta</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 02: PODCASTS & VIDEOCASTS -->
+          <article class="product-row">
+            <div class="product-media" onclick="openProductModal('podcast')">
+              <div class="product-mock-canvas">
+                <div class="product-mock-box">
+                  <span class="mono-tag" style="color: #eabc12;">ESTÚDIO PARCEIRO OU IN-LOCO</span>
+                  <p>Captação Multi-Câmera + Cortes Semanais</p>
+                  <span>Episódio completo em alta definição + pílulas verticais prontas para publicação.</span>
+                </div>
+              </div>
+              <div class="product-media-overlay">
+                <div class="product-media-top">
+                  <span class="badge-yellow">02 / PRODUTO</span>
+                  <span class="mono-tag" style="color: #ffffff;">ÁUDIO & VÍDEO MULTI-CÂMERA</span>
+                </div>
+                <div class="product-media-bottom">
+                  <span class="mono-tag">ESTÚDIO OU NA SUA EMPRESA</span>
+                  <span class="open-hint">VER DETALHES →</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="badge-yellow">AUTORIDADE & RELACIONAMENTO</span>
+              <h3>Podcasts & Videocasts</h3>
+              <p class="desc">
+                Produção completa de episódios para marcas que desejam construir relacionamento com clientes, parceiros e mercado — gravado em estúdio parceiro ou montando toda a estrutura dentro da sua empresa.
+              </p>
+              <ul class="product-highlights">
+                <li>Captação com múltiplas câmeras, iluminação de estúdio e áudio tratado</li>
+                <li>Entrega do episódio completo + pacote de cortes verticais para redes sociais</li>
+                <li>Operação avulsa ou em pacotes mensais recorrentes</li>
+              </ul>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="openProductModal('podcast')">> Ver produto</button>
+                <button class="btn-outline" onclick="openQuoteModal('Podcasts & Videocasts')">Solicitar proposta</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 03: COBERTURA DE FEIRAS & EVENTOS -->
+          <article class="product-row">
+            <div class="product-media" onclick="openProductModal('feiras')">
+              <div class="product-mock-canvas">
+                <div class="product-mock-box">
+                  <span class="mono-tag" style="color: #eabc12;">OPERAÇÃO DE 1 A 4 DIAS</span>
+                  <p>Equipe de até 4 Especialistas no Evento</p>
+                  <span>Vídeo, fotografia, edição rápida e cobertura em tempo real durante a feira.</span>
+                </div>
+              </div>
+              <div class="product-media-overlay">
+                <div class="product-media-top">
+                  <span class="badge-yellow">03 / PRODUTO</span>
+                  <span class="mono-tag" style="color: #ffffff;">ENTREGA NO MESMO DIA</span>
+                </div>
+                <div class="product-media-bottom">
+                  <span class="mono-tag">FEIRAS · CONGRESSOS · CONVENÇÕES</span>
+                  <span class="open-hint">VER DETALHES →</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="badge-yellow">COBERTURA EM TEMPO REAL</span>
+              <h3>Feiras & Eventos Corporativos</h3>
+              <p class="desc">
+                Cobertura ágil para estandes, congressos e eventos empresariais com operação de 1 a 4 dias e equipe de até 4 profissionais (vídeo, fotografia, edição no local e produção de histórias em tempo real).
+              </p>
+              <ul class="product-highlights">
+                <li>Vídeos editados durante o evento para movimentar as redes enquanto a feira acontece</li>
+                <li>Cobertura fotográfica completa de estande, palestras e relacionamento</li>
+                <li>Filme resumo pós-evento para comercial e marketing</li>
+              </ul>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="openProductModal('feiras')">> Ver produto</button>
+                <button class="btn-outline" onclick="openQuoteModal('Feiras & Eventos')">Solicitar proposta</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUTO 04: FILMES INSTITUCIONAIS & CAMPANHAS -->
+          <article class="product-row">
+            <div class="product-media" onclick="openProductModal('institucional')">
+              <div class="product-mock-canvas">
+                <div class="product-mock-box">
+                  <span class="mono-tag" style="color: #eabc12;">POSICIONAMENTO & VENDAS</span>
+                  <p>Filmes de Marca, Produto e Campanhas</p>
+                  <span>Roteiro, direção de cena e acabamento visual para apresentações e anúncios.</span>
+                </div>
+              </div>
+              <div class="product-media-overlay">
+                <div class="product-media-top">
+                  <span class="badge-yellow">04 / PRODUTO</span>
+                  <span class="mono-tag" style="color: #ffffff;">ROTEIRO · DIREÇÃO · FINALIZAÇÃO</span>
+                </div>
+                <div class="product-media-bottom">
+                  <span class="mono-tag">SOB MEDIDA</span>
+                  <span class="open-hint">VER DETALHES →</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="badge-yellow">MARCA & CONVERSÃO</span>
+              <h3>Filmes Institucionais & Campanhas</h3>
+              <p class="desc">
+                Produções pontuais de alto impacto para apresentar a estrutura da sua empresa, lançar novos produtos ou sustentar campanhas comerciais com clareza e estética cinematográfica.
+              </p>
+              <ul class="product-highlights">
+                <li>Apoio na estruturação do roteiro e condução de entrevistas no set</li>
+                <li>Versões adaptadas para site, apresentações comerciais e anúncios</li>
+                <li>Escala ajustada ao tamanho e orçamento de cada projeto</li>
+              </ul>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="openProductModal('institucional')">> Ver produto</button>
+                <button class="btn-outline" onclick="openQuoteModal('Filmes Institucionais')">Solicitar proposta</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS NÓS -->
+    <section class="about-section" id="quem-somos">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left">
+            <span class="mono-tag">— QUEM SOMOS NÓS</span>
+            <h2>Direção próxima para transformar quem entende do negócio em referência em vídeo.</h2>
+            <p>
+              A <strong>FlashDigitals</strong> nasceu para resolver um gargalo comum nas empresas: a dificuldade de produzir conteúdo audiovisual com qualidade de cinema e frequência semanal sem sobrecarregar a agenda interna.
+            </p>
+            <p>
+              Atendemos desde empresas pequenas que estão estruturando sua presença digital até grandes operações corporativas, unindo direção humanizada de cena, equipamentos de cinema e um fluxo inteligente de pós-produção.
+            </p>
+          </div>
+
+          <div class="pillars-list">
+            <div class="pillar-card">
+              <span class="mono-tag">01 / DIREÇÃO HUMANIZADA</span>
+              <h4>Condução leve para quem não é ator</h4>
+              <p>Dirigimos fundadores, especialistas e equipes comerciais com perguntas guiadas e ritmo natural, extraindo segurança e autenticidade diante da câmera.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="mono-tag">02 / ESCALA DE PRODUÇÃO</span>
+              <h4>1 dia de gravação, semanas de conteúdo</h4>
+              <p>Planejamos cada diária para render de 12 a 24 vídeos mensais organizados por tema, garantindo constância semanal sem parar a operação da empresa.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="mono-tag">03 / ENTREGA MULTI-FORMATO</span>
+              <h4>Pensado para cada tela desde o enquadramento</h4>
+              <p>Captamos e finalizamos cada peça já respeitando as proporções e linguagens do YouTube, LinkedIn, Instagram e campanhas patrocinadas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAMADA PARA GALERIA CRIATIVA -->
+    <section style="padding: 64px 0;">
+      <div class="container">
+        <div class="gallery-teaser">
+          <div>
+            <span class="badge-yellow">ACERVO & BASTIDORES</span>
+            <h3>Explore nossa Galeria Criativa</h3>
+            <p>Veja de perto nossos bastidores de gravação, iluminação em escritório, direção de cena e quadros extraídos de projetos reais.</p>
+          </div>
+          <button class="btn-primary" onclick="switchView('gallery')">Abrir Galeria Criativa →</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SUBPÁGINA: GALERIA CRIATIVA ==================== -->
+  <section id="view-gallery">
+    <div class="container">
+      <div style="margin-bottom: 24px;">
+        <button class="btn-outline" onclick="switchView('home')">← Voltar para o início</button>
+      </div>
+
+      <div class="section-header">
+        <div>
+          <span class="badge-yellow">GALERIA CRIATIVA</span>
+          <h1 style="font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.03em; margin-top: 12px;">Bastidores, sets e direção de arte</h1>
+        </div>
+        <p style="max-width: 420px; color: var(--text-muted); font-size: 14.5px;">
+          Registros reais da estrutura técnica, iluminação e enquadramentos aplicados nas produções da FlashDigitals.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" onclick="filterGallery('todos', this)">Todos os registros</button>
+        <button class="filter-btn" onclick="filterGallery('bastidores', this)">Bastidores & Sets</button>
+        <button class="filter-btn" onclick="filterGallery('frames', this)">Quadros & Direção de Arte</button>
+        <button class="filter-btn" onclick="filterGallery('formatos', this)">Formatos & Cortes</button>
+      </div>
+
+      <!-- Grade de Fotos (EDITE AQUI: substitua os blocos escuros por <img src="imagens/sua-foto.jpg" alt="...">) -->
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" data-cat="bastidores" onclick="openLightbox('PLUSOFT · BASTIDORES DE SET', 'Captação Expert Talks em Escritório', 'Setup de câmera principal, iluminação difusa e direção de cena para gravação de 1 diária.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-01.jpg" alt="Bastidores Plusoft"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">PLUSOFT · BASTIDORES</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">BASTIDORES & SETS</span>
+            <h4>Captação Expert Talks em Escritório</h4>
+            <p>Setup de luz e direção para gravação contínua em ambiente corporativo.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="frames" onclick="openLightbox('PLUSOFT · QUADRO FINAL', 'Enquadramento e Colorização', 'Tratamento de pele natural, contraste equilibrado e profundidade de campo para entrevistas.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-02.jpg" alt="Quadro Expert Talks"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">PLUSOFT · QUADRO</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">QUADROS & DIREÇÃO DE ARTE</span>
+            <h4>Enquadramento e Colorização</h4>
+            <p>Quadro final extraído da série Expert Talks.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="bastidores" onclick="openLightbox('FEIRAS & EVENTOS · OPERAÇÃO', 'Cobertura Multi-Dias em Estande', 'Equipe ágil para captação, fotografia e edição rápida durante eventos corporativos.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-03.jpg" alt="Cobertura de Feira"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">EVENTOS · BASTIDORES</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">BASTIDORES & SETS</span>
+            <h4>Cobertura Multi-Dias em Feira</h4>
+            <p>Operação de vídeo e entrega em tempo real no evento.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="formatos" onclick="openLightbox('MULTI-FORMATO · 16:9 / 4:5 / 9:16', 'Desdobramento Nativo por Canal', 'Adaptação de enquadramento, textos na tela e legendas para cada rede social.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-04.jpg" alt="Formatos e Cortes"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">MULTI-FORMATO</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">FORMATOS & CORTES</span>
+            <h4>Desdobramento Nativo por Canal</h4>
+            <p>Visualização das áreas seguras para YouTube, LinkedIn e Instagram.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="bastidores" onclick="openLightbox('PODCASTS · SET MULTI-CÂMERA', 'Iluminação e Captação de Áudio', 'Configuração de duas a três câmeras sincronizadas e microfonação dedicada.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-05.jpg" alt="Set de Podcast"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">PODCAST · SET</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">BASTIDORES & SETS</span>
+            <h4>Set Multi-Câmera para Videocast</h4>
+            <p>Operação em estúdio parceiro ou estrutura levada até o cliente.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="frames" onclick="openLightbox('INSTITUCIONAL · DIREÇÃO DE CENA', 'Estética Cinematográfica B2B', 'Composição de cena valorizando arquitetura, equipe e produto.')">
+          <div class="gallery-thumb">
+            <!-- EDITE AQUI: <img src="imagens/galeria-06.jpg" alt="Filme Institucional"> -->
+            <span class="badge-yellow" style="align-self: flex-start;">INSTITUCIONAL · QUADRO</span>
+            <span class="mono-tag" style="color: #b8b8b2;">CLIQUE PARA AMPLIAR +</span>
+          </div>
+          <div class="gallery-item-body">
+            <span class="mono-tag">QUADROS & DIREÇÃO DE ARTE</span>
+            <h4>Estética Cinematográfica B2B</h4>
+            <p>Quadro extraído de filme institucional corporativo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-top">
+        <h2>Pronto para transformar a presença em vídeo da sua empresa?</h2>
+        <button class="btn-primary" onclick="openQuoteModal('Geral')">Solicitar proposta agora →</button>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <strong>FLASHDIGITALS</strong> — Produtora Audiovisual B2B · São Paulo, SP
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/company/flashdigitals/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/flashdigitalsp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <!-- EDITE AQUI: Coloque seu e-mail e WhatsApp oficiais abaixo -->
+          <a href="mailto:contato@flashdigitals.com">contato@flashdigitals.com</a>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">WhatsApp Comercial</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL DE PRODUTO (EXPERT TALKS + OUTROS) ==================== -->
+  <div class="modal-backdrop" id="product-modal" onclick="closeModalOnBackdrop(event, 'product-modal')">
+    <div class="modal-window">
+      <div class="modal-header">
+        <span class="badge-yellow" id="pm-badge">PRODUTO 01 · EXPERT TALKS</span>
+        <button class="modal-close" onclick="closeProductModal()">FECHAR [ESC]</button>
+      </div>
+
+      <div class="modal-3col">
+        <div class="modal-info-card">
+          <h5>01. O DESAFIO</h5>
+          <p id="pm-challenge"></p>
+        </div>
+        <div class="modal-info-card">
+          <h5>02. DIREÇÃO & EXECUÇÃO</h5>
+          <p id="pm-execution"></p>
+        </div>
+        <div class="modal-info-card">
+          <h5>03. ENTREGAS & IMPACTO</h5>
+          <p id="pm-impact"></p>
+        </div>
+      </div>
+
+      <!-- Bloco Interativo com os 3 Vídeos Reais (Exibido no Expert Talks) -->
+      <div class="simulator-box" id="pm-simulator">
+        <div class="simulator-top">
+          <div>
+            <span class="badge-yellow">DEMONSTRAÇÃO MULTI-FORMATO</span>
+            <h3 style="font-size: 20px; margin-top: 8px;">Veja na prática os 3 formatos entregues</h3>
+          </div>
+          <div class="format-tabs">
+            <button class="format-tab active" id="tab-16x9" onclick="selectVideoFormat('16x9')">16:9 YouTube e LinkedIn</button>
+            <button class="format-tab" id="tab-4x5" onclick="selectVideoFormat('4x5')">4:5 Publicação Instagram</button>
+            <button class="format-tab" id="tab-9x16" onclick="selectVideoFormat('9x16')">9:16 Reels e Anúncios</button>
+          </div>
+        </div>
+
+        <div class="simulator-stage">
+          <div class="video-frame-wrapper">
+            <div class="video-aspect-box ratio-16x9" id="sim-video-box">
+              <video id="sim-video-player" controls playsinline preload="none">
+                <source id="sim-video-source" src="Expert talks 16x9.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <div class="simulator-details">
+            <span class="mono-tag" id="sim-channel">CANAL: YOUTUBE E LINKEDIN</span>
+            <h4 id="sim-title">Vídeos Densos de Autoridade (16:9)</h4>
+            <p id="sim-desc">Conteúdo aprofundado para posicionar especialistas e lideranças da sua empresa no YouTube e LinkedIn com clareza e ritmo.</p>
+            <div class="delivery-pill" id="sim-delivery">Entrega: Arquivo Final em Alta + Legendas na Tela e Arquivo (.SRT)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-cta">
+        <span style="font-size: 14px; color: var(--text-muted);">Quer aplicar esse formato de produção na sua empresa?</span>
+        <button class="btn-primary" id="pm-cta-btn" onclick="openQuoteModal('Expert Talks')">Solicitar proposta para este produto →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL DE SOLICITAÇÃO DE PROPOSTA ==================== -->
+  <div class="modal-backdrop" id="quote-modal" onclick="closeModalOnBackdrop(event, 'quote-modal')">
+    <div class="modal-window" style="max-width: 640px;">
+      <div class="modal-header">
+        <div>
+          <span class="badge-yellow">RESUMO DO PROJETO</span>
+          <h3 style="font-size: 22px; margin-top: 8px;">Solicitar proposta comercial</h3>
+        </div>
+        <button class="modal-close" onclick="closeQuoteModal()">FECHAR [ESC]</button>
+      </div>
+
+      <form id="quote-form" onsubmit="handleQuoteSubmit(event)">
+        <!-- EDITE AQUI: Cole abaixo sua Access Key gratuita do web3forms.com para receber os pedidos no seu e-mail -->
+        <input type="hidden" name="access_key" value="COLE_SUA_CHAVE_WEB3FORMS_AQUI" />
+        <input type="hidden" name="subject" value="Novo Pedido de Proposta — FlashDigitals" />
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="q-name">Seu nome *</label>
+            <input type="text" id="q-name" name="name" placeholder="Nome e sobrenome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="q-company">Empresa *</label>
+            <!-- Campo neutro conforme solicitado -->
+            <input type="text" id="q-company" name="company" placeholder="Sua empresa" required />
+          </div>
+
+          <div class="form-group">
+            <label for="q-whatsapp">WhatsApp *</label>
+            <input type="tel" id="q-whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required />
+          </div>
+
+          <div class="form-group">
+            <label for="q-email">E-mail corporativo *</label>
+            <input type="email" id="q-email" name="email" placeholder="voce@suaempresa.com.br" required />
+          </div>
+
+          <div class="form-group full">
+            <label for="q-product">Produto de interesse</label>
+            <select id="q-product" name="product">
+              <option value="Expert Talks (12 a 24 vídeos/mês)">Expert Talks (1 dia de captação → 12 a 24 vídeos/mês)</option>
+              <option value="Podcasts & Videocasts">Podcasts & Videocasts</option>
+              <option value="Feiras & Eventos">Cobertura de Feiras & Eventos Corporativos</option>
+              <option value="Filmes Institucionais">Filmes Institucionais & Campanhas</option>
+              <option value="Geral">Ainda não sei / Quero uma recomendação</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="q-notes">Objetivo do projeto (opcional)</label>
+            <textarea id="q-notes" name="message" rows="3" placeholder="Conte brevemente o porte da empresa, frequência desejada ou data do evento..."></textarea>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px;">
+          <button type="submit" class="btn-primary" style="flex: 1;">Enviar e abrir WhatsApp →</button>
+        </div>
+        <p id="quote-feedback" style="font-size: 13px; color: var(--text-muted); margin-top: 12px;"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== LIGHTBOX DA GALERIA CRIATIVA ==================== -->
+  <div class="modal-backdrop" id="lightbox-modal" onclick="closeModalOnBackdrop(event, 'lightbox-modal')">
+    <div class="modal-window" style="max-width: 720px;">
+      <div class="modal-header">
+        <span class="badge-yellow" id="lb-tag">BASTIDORES</span>
+        <button class="modal-close" onclick="closeLightbox()">FECHAR [ESC]</button>
+      </div>
+      <div style="background: #141414; border-radius: 8px; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; color: #9e9e98; margin-bottom: 18px; padding: 24px; text-align: center;">
+        <span class="mono-tag">IMAGEM EM ALTA RESOLUÇÃO (INSIRA A FOTO NA PASTA /IMAGENS)</span>
+      </div>
+      <h3 id="lb-title" style="font-size: 22px; margin-bottom: 8px;"></h3>
+      <p id="lb-desc" style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;"></p>
+      <button class="btn-primary" onclick="closeLightbox(); openQuoteModal('Geral')">Quero esse padrão na minha empresa →</button>
+    </div>
+  </div>
+
+  <script>
+    /* Alternar entre Início e Galeria Criativa */
+    function switchView(view) {
+      const homeEl = document.getElementById('view-home');
+      const galleryEl = document.getElementById('view-gallery');
+      const navHome = document.getElementById('nav-home');
+      const navGallery = document.getElementById('nav-gallery');
+
+      if (view === 'gallery') {
+        homeEl.style.display = 'none';
+        galleryEl.style.display = 'block';
+        navHome.classList.remove('active');
+        navGallery.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        galleryEl.style.display = 'none';
+        homeEl.style.display = 'block';
+        navGallery.classList.remove('active');
+        navHome.classList.add('active');
+      }
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-drawer').classList.toggle('open');
+    }
+
+    /* Dados dos Produtos */
+    const PRODUCTS_DATA = {
+      'expert-talks': {
+        badge: 'PRODUTO 01 · EXPERT TALKS (CASO PLUSOFT)',
+        challenge: 'Manter presença semanal constante no LinkedIn, Instagram e YouTube sem travar a rotina das lideranças ou da equipe comercial — seja em empresas pequenas, médias ou grandes.',
+        execution: 'Direção de cena dinâmica em apenas 1 dia de gravação, conduzindo conversas organizadas por blocos temáticos para multiplicação nativa.',
+        impact: 'De 12 a 24 vídeos mensais com disparos toda semana: episódios em 16:9, cortes 4:5 e vídeos verticais 9:16 para alcance e anúncios.',
+        showSimulator: true,
+        quoteName: 'Expert Talks (12 a 24 vídeos/mês)'
+      },
+      'podcast': {
+        badge: 'PRODUTO 02 · PODCASTS & VIDEOCASTS',
+        challenge: 'Criar um canal proprietário de conversa profunda com clientes e mercado sem precisar investir em estúdio próprio ou equipe interna.',
+        execution: 'Operação completa multi-câmera, iluminação e tratamento de áudio em estúdio parceiro ou montado dentro da sua empresa.',
+        impact: 'Episódios completos em alta definição somados a pacotes de cortes semanais prontos para Instagram, LinkedIn e YouTube Shorts.',
+        showSimulator: false,
+        quoteName: 'Podcasts & Videocasts'
+      },
+      'feiras': {
+        badge: 'PRODUTO 03 · FEIRAS & EVENTOS CORPORATIVOS',
+        challenge: 'Extrair retorno imediato de comunicação e vendas durante feiras e congressos antes que o assunto esfrie após o evento.',
+        execution: 'Operação de 1 a 4 dias com equipe de até 4 especialistas (vídeo, fotografia, edição no local e cobertura ágil em tempo real).',
+        impact: 'Entregas no mesmo dia para movimentar as redes durante a feira, além de fotografia completa e filme resumo para o time comercial.',
+        showSimulator: false,
+        quoteName: 'Feiras & Eventos'
+      },
+      'institucional': {
+        badge: 'PRODUTO 04 · FILMES INSTITUCIONAIS & CAMPANHAS',
+        challenge: 'Apresentar a estrutura, diferenciais e autoridade da empresa com clareza em reuniões comerciais, site e campanhas de tráfego.',
+        execution: 'Apoio no roteiro, direção de entrevistas, captação cinematográfica e finalização com identidade visual da marca.',
+        impact: 'Filme principal acompanhado de versões curtas otimizadas para anúncios e apresentações executivas.',
+        showSimulator: false,
+        quoteName: 'Filmes Institucionais'
+      }
+    };
+
+    /* Configuração dos 3 Vídeos Reais do Expert Talks */
+    const FORMAT_VIDEOS = {
+      '16x9': {
+        file: 'Expert talks 16x9.mp4',
+        ratioClass: 'ratio-16x9',
+        channel: 'CANAL: YOUTUBE E LINKEDIN',
+        title: 'Vídeos Densos de Autoridade (16:9)',
+        desc: 'Conteúdo aprofundado para posicionar especialistas e lideranças da sua empresa no YouTube e LinkedIn com clareza e ritmo.',
+        delivery: 'Entrega: Arquivo Final em Alta + Legendas na Tela e Arquivo (.SRT)'
+      },
+      '4x5': {
+        file: 'Expert talks 4x5.mp4',
+        ratioClass: 'ratio-4x5',
+        channel: 'CANAL: PUBLICAÇÃO INSTAGRAM E LINKEDIN',
+        title: 'Pílulas de Conteúdo Semanal (4:5)',
+        desc: 'Recortes dinâmicos otimizados para retenção no feed do Instagram e LinkedIn, garantindo disparos frequentes toda semana.',
+        delivery: 'Entrega: Arquivo Final em Alta + Textos na Tela e Legendas'
+      },
+      '9x16': {
+        file: 'Expert talks 9x16.mp4',
+        ratioClass: 'ratio-9x16',
+        channel: 'CANAL: REELS, SHORTS E ANÚNCIOS',
+        title: 'Vídeos Verticais e Anúncios (9:16)',
+        desc: 'Ganchos diretos de 60 a 90 segundos pensados para alcance orgânico e campanhas de mídia paga.',
+        delivery: 'Entrega: Arquivo Final em Alta + Variações de Gancho'
+      }
+    };
+
+    function openProductModal(key) {
+      const data = PRODUCTS_DATA[key];
+      if (!data) return;
+
+      document.getElementById('pm-badge').textContent = data.badge;
+      document.getElementById('pm-challenge').textContent = data.challenge;
+      document.getElementById('pm-execution').textContent = data.execution;
+      document.getElementById('pm-impact').textContent = data.impact;
+
+      const simBox = document.getElementById('pm-simulator');
+      if (data.showSimulator) {
+        simBox.style.display = 'block';
+        selectVideoFormat('16x9');
+      } else {
+        simBox.style.display = 'none';
+        pauseSimulatorVideo();
+      }
+
+      const ctaBtn = document.getElementById('pm-cta-btn');
+      ctaBtn.onclick = function () {
+        closeProductModal();
+        openQuoteModal(data.quoteName);
+      };
+
+      document.getElementById('product-modal').classList.add('open');
+    }
+
+    function closeProductModal() {
+      pauseSimulatorVideo();
+      document.getElementById('product-modal').classList.remove('open');
+    }
+
+    function pauseSimulatorVideo() {
+      const player = document.getElementById('sim-video-player');
+      if (player) player.pause();
+    }
+
+    function selectVideoFormat(formatKey) {
+      const cfg = FORMAT_VIDEOS[formatKey];
+      if (!cfg) return;
+
+      ['16x9', '4x5', '9x16'].forEach(k => {
+        document.getElementById('tab-' + k).classList.toggle('active', k === formatKey);
+      });
+
+      const box = document.getElementById('sim-video-box');
+      box.className = 'video-aspect-box ' + cfg.ratioClass;
+
+      document.getElementById('sim-channel').textContent = cfg.channel;
+      document.getElementById('sim-title').textContent = cfg.title;
+      document.getElementById('sim-desc').textContent = cfg.desc;
+      document.getElementById('sim-delivery').textContent = cfg.delivery;
+
+      const player = document.getElementById('sim-video-player');
+      const source = document.getElementById('sim-video-source');
+      player.pause();
+      source.src = cfg.file;
+      player.load();
+    }
+
+    /* Modal de Orçamento */
+    function openQuoteModal(productName) {
+      const select = document.getElementById('q-product');
+      if (productName) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.includes(productName)) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.getElementById('quote-modal').classList.add('open');
+    }
+
+    function closeQuoteModal() {
+      document.getElementById('quote-modal').classList.remove('open');
+    }
+
+    async function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const feedback = document.getElementById('quote-feedback');
+      const name = document.getElementById('q-name').value.trim();
+      const company = document.getElementById('q-company').value.trim();
+      const product = document.getElementById('q-product').value;
+      const notes = document.getElementById('q-notes').value.trim();
+
+      feedback.textContent = 'Enviando solicitação...';
+
+      /* Envia para Web3Forms se a chave já estiver configurada */
+      const formData = new FormData(form);
+      if (formData.get('access_key') !== 'COLE_SUA_CHAVE_WEB3FORMS_AQUI') {
+        try {
+          await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+        } catch (err) {}
+      }
+
+      /* EDITE AQUI: Troque 5511999999999 pelo seu número de WhatsApp comercial com DDI + DDD */
+      const whatsappNumber = '5511999999999';
+      const msg = encodeURIComponent(
+        `Olá! Vim pelo site da FlashDigitals.\n` +
+        `Nome: ${name}\n` +
+        `Empresa: ${company}\n` +
+        `Produto: ${product}\n` +
+        (notes ? `Detalhes: ${notes}` : '')
+      );
+
+      feedback.textContent = 'Redirecionando para o WhatsApp comercial...';
+      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
+    }
+
+    /* Filtros e Lightbox da Galeria Criativa */
+    function filterGallery(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (category === 'todos' || item.dataset.cat === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function openLightbox(tag, title, desc) {
+      document.getElementById('lb-tag').textContent = tag;
+      document.getElementById('lb-title').textContent = title;
+      document.getElementById('lb-desc').textContent = desc;
+      document.getElementById('lightbox-modal').classList.add('open');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('open');
+    }
+
+    function closeModalOnBackdrop(event, id) {
+      if (event.target.id === id) {
+        if (id === 'product-modal') closeProductModal();
+        if (id === 'quote-modal') closeQuoteModal();
+        if (id === 'lightbox-modal') closeLightbox();
+      }
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeProductModal();
+        closeQuoteModal();
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
